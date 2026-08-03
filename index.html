@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>House.for_AI | AI Solutions</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#070707;
+color:white;
+overflow-x:hidden;
+
+}
+
+/* Animated Background */
+
+body::before{
+
+content:"";
+position:fixed;
+width:700px;
+height:700px;
+background:radial-gradient(circle,#c8a15b55,transparent 70%);
+top:-250px;
+left:-250px;
+animation:move1 12s infinite alternate;
+z-index:-1;
+
+}
+
+body::after{
+
+content:"";
+position:fixed;
+width:600px;
+height:600px;
+background:radial-gradient(circle,#FFD87A22,transparent 70%);
+bottom:-200px;
+right:-200px;
+animation:move2 14s infinite alternate;
+z-index:-1;
+
+}
+
+@keyframes move1{
+to{
+transform:translate(180px,120px);
+}
+}
+
+@keyframes move2{
+to{
+transform:translate(-150px,-120px);
+}
+}
+
+/* Navbar */
+
+nav{
+
+position:fixed;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+backdrop-filter:blur(15px);
+background:rgba(0,0,0,.45);
+z-index:999;
+
+}
+
+nav h2{
+
+color:#FFD87A;
+letter-spacing:2px;
+
+}
+
+nav ul{
+
+display:flex;
+gap:35px;
+list-style:none;
+
+}
+
+nav a{
+
+text-decoration:none;
+color:white;
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#FFD87A;
+
+}
+
+/* Hero */
+
+.hero{
+
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:120px 10%;
+gap:80px;
+flex-wrap:wrap;
+
+}
+
+.profile{
+
+width:280px;
+height:280px;
+border-radius:50%;
+padding:6px;
+background:linear-gradient(45deg,#FFD87A,#7d5a1c,#FFD87A);
+
+}
+
+.profile img{
+
+width:100%;
+height:100%;
+border-radius:50%;
+object-fit:cover;
+border:6px solid #111;
+
+}
+
+.content{
+
+max-width:650px;
+
+}
+
+.tag{
+
+display:inline-block;
+padding:8px 18px;
+border-radius:30px;
+background:#FFD87A20;
+color:#FFD87A;
+margin-bottom:20px;
+
+}
+
+.content h1{
+
+font-size:60px;
+line-height:70px;
+
+}
+
+.content h1 span{
+
+color:#FFD87A;
+
+}
+
+.content p{
+
+margin:25px 0;
+font-size:18px;
+line-height:32px;
+color:#ddd;
+
+}
+
+.buttons{
+
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+padding:15px 35px;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+transition:.4s;
+
+}
+
+.gold{
+
+background:#FFD87A;
+color:black;
+
+}
+
+.gold:hover{
+
+transform:translateY(-5px);
+
+}
+
+.outline{
+
+border:2px solid #FFD87A;
+color:#FFD87A;
+
+}
+
+.outline:hover{
+
+background:#FFD87A;
+color:black;
+
+}
+
+/* Cards */
+
+section{
+
+padding:90px 10%;
+
+}
+
+.title{
+
+font-size:40px;
+margin-bottom:60px;
+text-align:center;
+color:#FFD87A;
+
+}
+
+.grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.1);
+backdrop-filter:blur(18px);
+padding:35px;
+border-radius:25px;
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+box-shadow:0 20px 50px rgba(255,216,122,.15);
+
+}
+
+.card h3{
+
+color:#FFD87A;
+margin-bottom:18px;
+
+}
+
+.card p{
+
+color:#ccc;
+line-height:28px;
+
+}
+
+/* About */
+
+.about{
+
+display:flex;
+gap:50px;
+flex-wrap:wrap;
+align-items:center;
+
+}
+
+.about div{
+
+flex:1;
+
+}
+
+.about h2{
+
+font-size:40px;
+color:#FFD87A;
+margin-bottom:25px;
+
+}
+
+.about p{
+
+line-height:34px;
+color:#ddd;
+
+}
+
+/* Footer */
+
+footer{
+
+text-align:center;
+padding:40px;
+color:#aaa;
+border-top:1px solid rgba(255,255,255,.1);
+
+}
+
+footer a{
+
+color:#FFD87A;
+text-decoration:none;
+
+}
+
+@media(max-width:768px){
+
+.content h1{
+
+font-size:42px;
+line-height:50px;
+
+}
+
+.hero{
+
+text-align:center;
+
+}
+
+.buttons{
+
+justify-content:center;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<h2>House.for_AI</h2>
+
+<ul>
+
+<li><a href="#services">Services</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<div class="profile">
+
+<img src="logo.png" alt="House for AI">
+
+</div>
+
+<div class="content">
+
+<div class="tag">
+🚀 AI is World
+</div>
+
+<h1>
+Discover the Best of <span>Artificial Intelligence</span>
+</h1>
+
+<p>
+
+Helping creators, students, businesses and developers unlock the power of AI through smart prompts, AI tools, automation and practical solutions.
+
+</p>
+
+<div class="buttons">
+
+<a href="#services" class="btn gold">
+Explore Services
+</a>
+
+<a href="#contact" class="btn outline">
+Let's Collaborate
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<h2 class="title">
+Our Services
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>🤖 AI Prompts</h3>
+
+<p>
+
+High-quality prompts for ChatGPT, Midjourney, Claude, Gemini and other AI platforms to maximize productivity.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>⚡ AI Automation</h3>
+
+<p>
+
+Automate repetitive tasks using AI workflows, no-code tools and intelligent systems.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🛠 AI Tools</h3>
+
+<p>
+
+Discover the best AI tools for education, business, programming, design and content creation.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>💻 Programming</h3>
+
+<p>
+
+Currently learning Java while exploring AI development and modern software technologies.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<div class="about">
+
+<div>
+
+<h2>
+About House.for_AI
+</h2>
+
+<p>
+
+House.for_AI is dedicated to exploring the rapidly evolving world of Artificial Intelligence. From powerful prompts and automation to practical AI tools, the goal is to help individuals and businesses work smarter, learn faster and create better.
+
+Whether you're a student, creator, entrepreneur or developer, there's always something new to discover.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">
+Let's Connect
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>📩 Collaborations</h3>
+
+<p>
+
+Open for AI collaborations, educational content, projects and partnerships.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>👨‍💻 Founder</h3>
+
+<p>
+
+Nirmay
+
+<br><br>
+
+Java Programmer (Learning)
+
+<br>
+
+AI Enthusiast
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🌐 Portfolio</h3>
+
+<p>
+
+nirmay274304.github.io/NIRMAY
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 House.for_AI
+
+<br><br>
+
+Built with ❤️ by Nirmay
+
+</footer>
+
+</body>
+</html>
