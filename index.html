@@ -2000,12 +2000,249 @@
         bottom: 80px;
       }
       
-      .tiers-grid {
+      .tiers-grid,
+      .instagram-grid,
+      .instagram-stats,
+      .partner-logos,
+      .transform-grid {
         grid-template-columns: 1fr;
       }
       
       .tier-card.featured {
         transform: scale(1);
+      }
+
+      .newsletter {
+        grid-template-columns: 1fr;
+      }
+
+      .newsletter input,
+      .newsletter button {
+        width: 100%;
+      }
+    }
+
+    .partner-logos {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 18px;
+      padding: 24px;
+      border-radius: 28px;
+      background: rgba(255,255,255,0.05);
+      border: 1.5px solid rgba(255,255,255,0.14);
+      box-shadow: 0 40px 100px rgba(0,0,0,0.25);
+      text-align: center;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      font-weight: 600;
+    }
+
+    .partner-logos span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 70px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: transform var(--transition), background var(--transition), border-color var(--transition);
+    }
+
+    .partner-logos span:hover {
+      transform: translateY(-6px);
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,216,122,0.3);
+    }
+
+    .prompt-panel {
+      display: grid;
+      gap: 24px;
+      padding: 32px;
+      background: rgba(255,255,255,0.06);
+      border: 1.5px solid rgba(255,255,255,0.14);
+      border-radius: 32px;
+      box-shadow: 0 40px 100px rgba(0,0,0,0.3);
+    }
+
+    .prompt-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    .prompt-tag,
+    .prompt-status {
+      padding: 12px 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .transform-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .transform-card {
+      padding: 28px;
+      border-radius: 32px;
+      background: rgba(255,255,255,0.06);
+      border: 1.5px solid rgba(255,255,255,0.14);
+      box-shadow: 0 40px 100px rgba(0,0,0,0.28);
+      transition: transform var(--transition), border-color var(--transition), background var(--transition);
+    }
+
+    .transform-card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(255,216,122,0.28);
+      background: rgba(255,255,255,0.09);
+    }
+
+    .transform-card.before {
+      background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
+    }
+
+    .transform-card.after {
+      background: linear-gradient(135deg, rgba(95,203,229,0.08), rgba(255,216,122,0.06));
+    }
+
+    .instagram-highlights {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .highlight-card {
+      padding: 24px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.06);
+      border: 1.5px solid rgba(255,255,255,0.12);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.22);
+      position: relative;
+      transition: transform var(--transition), border-color var(--transition), background var(--transition);
+    }
+
+    .highlight-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255,216,122,0.3);
+      background: rgba(255,255,255,0.1);
+    }
+
+    .highlight-tag {
+      display: inline-flex;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: var(--gold);
+      font-size: 0.85rem;
+      margin-bottom: 14px;
+    }
+
+
+    .newsletter {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: 1fr 1fr .8fr;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .newsletter input {
+      min-width: 0;
+    }
+
+    .newsletter button {
+      align-self: stretch;
+      min-width: 0;
+    }
+
+    .cta-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 28px 32px;
+      border-radius: 30px;
+      background: rgba(255,216,122,0.08);
+      border: 1.5px solid rgba(255,216,122,0.25);
+      box-shadow: 0 40px 100px rgba(255,216,122,0.12);
+      backdrop-filter: blur(24px);
+      margin: 24px 0 40px;
+    }
+
+    .cta-content h3 {
+      margin: 0 0 6px;
+      color: var(--gold);
+      font-size: 1.7rem;
+    }
+
+    .cta-content p {
+      margin: 0;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(80px, 1fr));
+      gap: 12px;
+      text-align: center;
+    }
+
+    .countdown span {
+      display: block;
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .countdown small {
+      display: block;
+      color: var(--text-secondary);
+      margin-top: 6px;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .cta-banner .btn {
+      align-self: start;
+      padding: 16px 24px;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 980px) {
+      .partner-logos {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .cta-banner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .countdown {
+        grid-template-columns: repeat(2, minmax(80px, 1fr));
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .partner-logos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .highlight-card,
+      .prompt-panel,
+      .cta-banner {
+        padding: 22px;
       }
     }
   </style>
@@ -2032,8 +2269,8 @@
     <div class="brand">House.for_AI</div>
     <div class="menu">
       <a href="#services">Services</a>
-      <a href="#projects">Tools</a>
-      <a href="#projects">Projects</a>
+      <a href="#partners">Partners</a>
+      <a href="#prompt-demo">Prompt</a>
       <a href="#gallery">Gallery</a>
       <a href="#instagram">Instagram</a>
       <a href="#contact">Contact</a>
@@ -2101,6 +2338,20 @@
     </div>
   </section>
 
+  <section id="partners">
+    <div class="section-title">
+      <h2>Trusted By</h2>
+      <p>Featured by modern teams, premium studios, and high-impact creators who expect elegant AI experiences.</p>
+    </div>
+    <div class="partner-logos glass">
+      <span>AI Studio</span>
+      <span>Motion Lab</span>
+      <span>Pixel House</span>
+      <span>Nova Media</span>
+      <span>Pulse Creative</span>
+    </div>
+  </section>
+
   <section id="premium-features">
     <div class="section-title">
       <h2>Premium Features</h2>
@@ -2158,6 +2409,27 @@
     </div>
   </section>
 
+  <section id="prompt-demo">
+    <div class="section-title">
+      <h2>Prompt Generator</h2>
+      <p>Watch an animated preview of how House.for_AI crafts high-impact prompts and intelligent workflows.</p>
+    </div>
+    <div class="prompt-panel glass">
+      <div class="prompt-meta">
+        <div class="prompt-tag">Live Prompt</div>
+        <div class="prompt-status">Generating insights...</div>
+      </div>
+      <div class="terminal" aria-live="polite">
+        <div class="terminal-header">
+          <span class="terminal-dot"></span>
+          <span class="terminal-dot"></span>
+          <span class="terminal-dot"></span>
+        </div>
+        <div class="terminal-content" id="promptTerminal"></div>
+      </div>
+    </div>
+  </section>
+
   <section id="testimonials" class="testimonials">
     <div class="section-title">
       <h2>Testimonials</h2>
@@ -2190,6 +2462,23 @@
       <div class="blog-card glass">
         <h3>Beginner's guide to AI automation</h3>
         <p>Build workflows that reduce manual work and increase output with intelligent systems.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="transformations">
+    <div class="section-title">
+      <h2>Before & After</h2>
+      <p>See how premium AI transformations upgrade your brand, speed, and creative output.</p>
+    </div>
+    <div class="transform-grid">
+      <div class="transform-card glass before">
+        <h3>Before</h3>
+        <p>Static prompts, one-size-fits-all content, and slow manual workflows.</p>
+      </div>
+      <div class="transform-card glass after">
+        <h3>After</h3>
+        <p>Dynamic AI prompts, smart automations, and premium motion-driven experiences.</p>
       </div>
     </div>
   </section>
@@ -2287,6 +2576,19 @@
         </div>
       </div>
       
+      <div class="instagram-highlights">
+        <div class="highlight-card glass">
+          <span class="highlight-tag">Latest Reel</span>
+          <h4>AI Prompt Mastery</h4>
+          <p>Watch the quick breakdown of a premium AI prompt workflow.</p>
+        </div>
+        <div class="highlight-card glass">
+          <span class="highlight-tag">Story</span>
+          <h4>Daily Inspiration</h4>
+          <p>Creative motion, tools, and prompt trends delivered in a story-style highlight.</p>
+        </div>
+      </div>
+      
       <div class="instagram-cta">
         <p>Get exclusive content and real-time updates</p>
         <div class="cta-icons">
@@ -2315,49 +2617,9 @@
         </div>
       </div>
     </div>
-    <div class="premium-tiers glass">
-      <div class="tier-header">
-        <h3>Choose Your Plan</h3>
-        <p>Premium features designed for ambitious creators</p>
-      </div>
-      <div class="tiers-grid">
-        <div class="tier-card">
-          <div class="tier-name">Starter</div>
-          <div class="tier-price">Free</div>
-          <ul class="tier-features">
-            <li>✓ 50 Prompts/month</li>
-            <li>✓ Basic Templates</li>
-            <li>✓ Community Access</li>
-          </ul>
-          <button class="btn outline">Get Started</button>
-        </div>
-        <div class="tier-card featured">
-          <div class="tier-badge">Most Popular</div>
-          <div class="tier-name">Professional</div>
-          <div class="tier-price">$9<span>/mo</span></div>
-          <ul class="tier-features">
-            <li>✓ Unlimited Prompts</li>
-            <li>✓ 500+ Templates</li>
-            <li>✓ AI Automation</li>
-            <li>✓ Priority Support</li>
-          </ul>
-          <button class="btn gold">Upgrade Now</button>
-        </div>
-        <div class="tier-card">
-          <div class="tier-name">Elite</div>
-          <div class="tier-price">$29<span>/mo</span></div>
-          <ul class="tier-features">
-            <li>✓ Everything in Pro</li>
-            <li>✓ White-Glove Setup</li>
-            <li>✓ Custom Workflows</li>
-            <li>✓ 1:1 Consulting</li>
-          </ul>
-          <button class="btn outline">Request Demo</button>
-        </div>
-      </div>
-    </div>
     <div class="newsletter glass">
       <input id="newsletterEmail" type="email" placeholder="Enter your email" aria-label="Email address">
+      <input id="newsletterPhone" type="tel" placeholder="Phone number (SMS)" aria-label="Phone number">
       <button id="newsletterSubmit">Subscribe</button>
     </div>
   </section>
@@ -2385,6 +2647,20 @@
         <p class="form-note">Fast response, quality AI thinking, and friendly support.</p>
       </form>
     </div>
+  </section>
+
+  <section class="cta-banner glass" id="countdownCta">
+    <div class="cta-content">
+      <h3>Launch Your Premium AI Experience</h3>
+      <p>Secure a limited-time onboarding offer and get a custom AI toolkit tailored to your brand.</p>
+    </div>
+    <div class="countdown" id="countdownTimer">
+      <div><span id="days">00</span><small>Days</small></div>
+      <div><span id="hours">00</span><small>Hours</small></div>
+      <div><span id="minutes">00</span><small>Minutes</small></div>
+      <div><span id="seconds">00</span><small>Seconds</small></div>
+    </div>
+    <a href="#contact" class="btn gold">Book a Demo</a>
   </section>
 
   <footer>
@@ -2460,6 +2736,8 @@
       initCursor();
       initParticles();
       initScrollAnimations();
+      initPromptGenerator();
+      initCountdown();
       initTheme();
       updateTestimonials();
     };
@@ -2526,7 +2804,7 @@
 
     const initScrollAnimations = () => {
       gsap.registerPlugin(ScrollTrigger);
-      gsap.utils.toArray('.section-title, .service-card, .counter, .project-card, .blog-card, .testimonial-card, .gallery-card, .contact-card, .section-panel').forEach(el => {
+      gsap.utils.toArray('.section-title, .service-card, .counter, .project-card, .blog-card, .testimonial-card, .gallery-card, .contact-card, .section-panel, .prompt-panel, .transform-card, .highlight-card, .partner-logos, .cta-banner').forEach(el => {
         gsap.from(el, {
           opacity: 0,
           y: 50,
@@ -2546,6 +2824,47 @@
         progress.style.width = progressWidth + '%';
         backToTop.classList.toggle('visible', scrollTop > 420);
       }, { passive: true });
+    };
+
+    const initPromptGenerator = () => {
+      const terminal = document.getElementById('promptTerminal');
+      if (!terminal) return;
+      const lines = [
+        '> Generating premium prompt sequence...',
+        '> Analyzing brand tone and conversion goals...',
+        '> Applying motion-rich voice and elegant wording...',
+        '> Prompt ready: "You are a premium AI design partner helping creators launch high-impact automation and brand prompts quickly."'
+      ];
+      let index = 0;
+      const showNext = () => {
+        if (index >= lines.length) return;
+        const line = document.createElement('div');
+        line.textContent = lines[index];
+        terminal.appendChild(line);
+        terminal.scrollTop = terminal.scrollHeight;
+        index += 1;
+        setTimeout(showNext, 900);
+      };
+      showNext();
+    };
+
+    const initCountdown = () => {
+      const deadline = new Date();
+      deadline.setDate(deadline.getDate() + 5);
+      const update = () => {
+        const now = new Date();
+        const diff = Math.max(0, deadline - now);
+        const days = Math.floor(diff / 86400000);
+        const hours = Math.floor((diff % 86400000) / 3600000);
+        const minutes = Math.floor((diff % 3600000) / 60000);
+        const seconds = Math.floor((diff % 60000) / 1000);
+        document.getElementById('days').textContent = String(days).padStart(2, '0');
+        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+      };
+      update();
+      setInterval(update, 1000);
     };
 
     const initCursor = () => {
