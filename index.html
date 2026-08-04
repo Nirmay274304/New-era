@@ -1056,6 +1056,297 @@
       box-shadow: 0 35px 90px rgba(255,216,122,0.25);
     }
 
+    .newsletter-feedback {
+      grid-column: 1 / -1;
+      color: rgba(255,255,255,0.8);
+      font-size: 0.95rem;
+      min-height: 26px;
+      transition: color var(--transition);
+    }
+
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    .comparison-card {
+      padding: 28px;
+      border-radius: 32px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      box-shadow: 0 40px 100px rgba(0,0,0,0.28);
+      transition: transform var(--transition), border-color var(--transition), background var(--transition);
+    }
+
+    .comparison-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(95,203,229,0.3);
+      background: rgba(255,255,255,0.1);
+    }
+
+    .comparison-card h3 {
+      margin-bottom: 18px;
+      color: var(--gold);
+    }
+
+    .comparison-card ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .comparison-card li {
+      padding-left: 18px;
+      position: relative;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .comparison-card li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .competitor-card {
+      background: rgba(255,255,255,0.04);
+    }
+
+    .onboarding-panel {
+      display: grid;
+      gap: 20px;
+      padding: 32px;
+      border-radius: 32px;
+      background: rgba(255,255,255,0.06);
+      border: 1.5px solid rgba(255,255,255,0.14);
+      box-shadow: 0 40px 100px rgba(0,0,0,0.28);
+    }
+
+    .onboarding-choice {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .onboarding-btn {
+      padding: 16px 24px;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      color: var(--text);
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform var(--transition), background var(--transition), border-color var(--transition);
+    }
+
+    .onboarding-btn:hover,
+    .onboarding-btn.active {
+      background: rgba(255,255,255,0.14);
+      border-color: rgba(255,216,122,0.4);
+      transform: translateY(-2px);
+    }
+
+    .onboarding-summary {
+      padding: 24px;
+      border-radius: 28px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .before-after-panel {
+      display: grid;
+      gap: 24px;
+      padding: 30px;
+      border-radius: 32px;
+      background: rgba(255,255,255,0.06);
+      border: 1.5px solid rgba(255,255,255,0.14);
+      box-shadow: 0 40px 100px rgba(0,0,0,0.3);
+    }
+
+    .before-after-frame {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      min-height: 340px;
+      background: rgba(0,0,0,0.16);
+    }
+
+    .before-after-image {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      padding: 24px;
+      color: #fff;
+    }
+
+    .before-after-image span {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(0,0,0,0.4);
+      color: var(--gold);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .before-after-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.9;
+    }
+
+    .after-panel {
+      width: 50%;
+      overflow: hidden;
+      clip-path: inset(0 0 0 0);
+      z-index: 1;
+      transition: width 0.35s ease;
+    }
+
+    .after-slider {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 18px;
+      margin: 0 24px;
+      width: calc(100% - 48px);
+      appearance: none;
+      height: 5px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.18);
+      outline: none;
+      cursor: pointer;
+    }
+
+    .after-slider::-webkit-slider-thumb {
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 2px solid rgba(255,255,255,0.9);
+      box-shadow: 0 10px 30px rgba(255,216,122,0.3);
+    }
+
+    .faq-grid {
+      display: grid;
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .faq-card {
+      padding: 24px;
+      border-radius: 28px;
+      background: rgba(255,255,255,0.06);
+      border: 1.5px solid rgba(255,255,255,0.14);
+      cursor: pointer;
+      transition: transform var(--transition), border-color var(--transition), background var(--transition);
+    }
+
+    .faq-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(95,203,229,0.3);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      border: none;
+      background: transparent;
+      color: var(--text);
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      color: var(--text-secondary);
+      margin-top: 14px;
+      line-height: 1.8;
+      padding: 0 0;
+    }
+
+    .faq-card.open .faq-answer {
+      max-height: 200px;
+      padding-top: 14px;
+    }
+
+    .trust-badges {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+      padding: 24px;
+      border-radius: 28px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .trust-badges span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 60px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.08);
+      color: var(--text);
+      padding: 16px 18px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .faq-card.open .faq-question::after {
+      content: '–';
+      float: right;
+    }
+
+    .faq-question::after {
+      content: '+';
+      float: right;
+      font-weight: 900;
+    }
+
+    .section-title p.handwritten {
+      font-family: 'Caveat', 'Pacifico', cursive;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+      margin-top: 14px;
+      color: rgba(255,255,255,0.78);
+    }
+
+    .testimonial-controls button {
+      width: 52px;
+      height: 52px;
+      font-size: 1.2rem;
+    }
+
+    .testimonial-card {
+      min-height: 240px;
+      padding: 32px;
+      background: rgba(255,255,255,0.06);
+      border: 1.5px solid rgba(255,255,255,0.14);
+      box-shadow: 0 40px 100px rgba(0,0,0,0.28);
+    }
+
     .contact-grid {
       display: grid;
       grid-template-columns: 1.1fr .9fr;
@@ -2182,6 +2473,245 @@
       font-size: 1.7rem;
     }
 
+    .welcome-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      display: grid;
+      place-items: center;
+      background: rgba(4,6,12,0.95);
+      backdrop-filter: blur(18px);
+      overflow: hidden;
+      opacity: 1;
+      pointer-events: auto;
+      transition: opacity 0.6s ease;
+      animation: fadeInOverlay 0.8s ease-out backwards;
+    }
+
+    .welcome-overlay.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .welcome-panel {
+      width: min(680px, calc(100% - 40px));
+      padding: 48px 42px;
+      border-radius: 38px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 50px 140px rgba(0,0,0,0.4);
+      transform: translateY(18px);
+      animation: welcomeEntrance 0.9s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+    }
+
+    .welcome-panel::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 25%, rgba(255,216,122,0.16), transparent 35%),
+                  radial-gradient(circle at 80% 20%, rgba(95,203,229,0.14), transparent 30%);
+      pointer-events: none;
+    }
+
+    .welcome-panel::after {
+      content: '';
+      position: absolute;
+      inset: -32px;
+      background: radial-gradient(circle at 50% 50%, rgba(255,216,122,0.18), transparent 38%);
+      filter: blur(28px);
+      opacity: 0.55;
+      pointer-events: none;
+      animation: glowOrbit 4.4s ease-in-out infinite alternate;
+    }
+
+    .welcome-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+      padding: 12px 22px;
+      border-radius: 999px;
+      color: var(--gold);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,216,122,0.2);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      backdrop-filter: blur(18px);
+      animation: badgePulse 1.2s ease-out backwards;
+    }
+
+    .welcome-panel h1 {
+      margin: 0 0 18px;
+      font-size: clamp(2.8rem, 4vw, 4.8rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      color: var(--text);
+      text-shadow: 0 12px 30px rgba(0,0,0,0.15);
+      animation: welcomeTitle 1.2s ease-out backwards;
+    }
+
+    .welcome-panel p {
+      margin: 0 auto 24px;
+      max-width: 560px;
+      color: var(--text-secondary);
+      line-height: 1.9;
+      font-size: 1rem;
+      opacity: 0.92;
+      animation: welcomeText 1.2s ease-out 0.2s backwards;
+    }
+
+    .welcome-instruction {
+      margin: 0 auto 24px;
+      max-width: 560px;
+      color: rgba(255,255,255,0.75);
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-weight: 700;
+      opacity: 0.92;
+      animation: welcomeText 1.2s ease-out 0.35s backwards;
+    }
+
+    .welcome-typewriter {
+      display: inline-block;
+      color: var(--gold);
+      font-size: 1.05rem;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid var(--gold);
+      animation: blink 1.2s infinite step-end;
+      text-shadow: 0 0 20px rgba(255,216,122,0.24);
+    }
+
+    .creator-credit {
+      margin: 0 auto 22px;
+      max-width: 560px;
+      font-family: 'Caveat', 'Pacifico', cursive;
+      font-size: clamp(1.75rem, 3.6vw, 2.3rem);
+      color: #fff;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      opacity: 0.96;
+      text-shadow: 0 10px 24px rgba(0,0,0,0.22);
+      animation: welcomeText 1.2s ease-out 0.45s backwards;
+    }
+
+    .creator-credit strong {
+      display: block;
+      font-size: clamp(2rem, 4vw, 2.7rem);
+      font-weight: 900;
+      letter-spacing: 0.01em;
+    }
+
+    .welcome-line {
+      height: 2px;
+      width: 140px;
+      margin: 0 auto;
+      background: linear-gradient(90deg, rgba(255,216,122,0.95), rgba(95,203,229,0.95));
+      border-radius: 999px;
+      opacity: 0;
+      animation: welcomeLine 1.2s ease-out 0.55s backwards, welcomeGlow 2.8s ease-in-out 1.4s infinite alternate;
+    }
+
+    @keyframes fadeInOverlay {
+      from { opacity: 0; backdrop-filter: blur(0); }
+      to { opacity: 1; backdrop-filter: blur(18px); }
+    }
+
+    @keyframes welcomeEntrance {
+      from { opacity: 0; transform: translateY(38px) scale(0.96); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes badgePulse {
+      from { opacity: 0; transform: translateY(14px) scale(0.96); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes welcomeGlow {
+      from { box-shadow: 0 0 24px rgba(255,216,122,0.2); }
+      to { box-shadow: 0 0 34px rgba(95,203,229,0.28); }
+    }
+
+    @keyframes glowOrbit {
+      from { transform: translate(-16px, -16px) scale(0.98); opacity: 0.42; }
+      to { transform: translate(16px, 16px) scale(1.05); opacity: 0.75; }
+    }
+
+    @keyframes welcomeTitle {
+      from { opacity: 0; transform: translateY(-24px) scale(0.96); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes welcomeText {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 0.92; transform: translateY(0); }
+    }
+
+    @keyframes welcomeButtons {
+      from { opacity: 0; transform: translateY(22px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes welcomeLine {
+      from { opacity: 0; width: 0; }
+      to { opacity: 1; width: 140px; }
+    }
+
+    .welcome-overlay.glow::after {
+      content: '';
+      position: absolute;
+      inset: -20px;
+      background: radial-gradient(circle at 30% 30%, rgba(255,216,122,0.16), transparent 24%),
+                  radial-gradient(circle at 75% 20%, rgba(95,203,229,0.18), transparent 24%);
+      filter: blur(30px);
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    .welcome-overlay .btn {
+      min-width: 150px;
+    }
+
+    .welcome-overlay .btn.gold {
+      background: linear-gradient(135deg, rgba(255,216,122,1), rgba(255,183,68,0.96));
+      color: #111;
+      box-shadow: 0 25px 70px rgba(255,216,122,0.22);
+    }
+
+    .welcome-overlay .btn.outline {
+      color: var(--text);
+      border-color: rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.07);
+    }
+
+    .welcome-overlay .btn:hover {
+      transform: translateY(-3px) scale(1.02);
+    }
+
+    .welcome-overlay .btn:focus {
+      outline: 2px solid rgba(255,216,122,0.6);
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 720px) {
+      .welcome-panel {
+        padding: 32px 24px;
+      }
+
+      .welcome-panel h1 {
+        font-size: clamp(2.4rem, 8vw, 3.4rem);
+      }
+
+      .welcome-actions {
+        width: 100%;
+      }
+    }
+
     .cta-content p {
       margin: 0;
       color: var(--text-secondary);
@@ -2265,6 +2795,17 @@
     <span>♪</span> Music Off
   </div>
 
+  <div class="welcome-overlay" id="welcomeOverlay" aria-label="Welcome screen">
+    <div class="welcome-panel glass">
+      <div class="welcome-badge">Welcome</div>
+      <h1>Welcome to House.for_AI</h1>
+      <p>Discover premium AI prompts, automation, and elegant design built for modern creators.</p>
+      <p class="creator-credit"><strong>Created by Nirmay Kumar Kushwaha</strong></p>
+      <p class="welcome-instruction"><span id="welcomeTypewriter" class="welcome-typewriter" aria-label="Tap anywhere to enter the site."></span></p>
+      <div class="welcome-line"></div>
+    </div>
+  </div>
+
   <nav>
     <div class="brand">House.for_AI</div>
     <div class="menu">
@@ -2317,6 +2858,88 @@
     </div>
   </section>
 
+  <section id="instagram">
+    <div class="section-title">
+      <h2>Follow on Instagram</h2>
+      <p>Join our community for daily AI tips, premium prompts, and creative automation insights.</p>
+    </div>
+    
+    <div class="instagram-showcase glass">
+      <div class="instagram-header">
+        <div class="instagram-profile">
+          <div class="instagram-avatar">
+            <img src="logo.png" alt="House.for_AI logo" loading="lazy">
+          </div>
+          <div class="instagram-info">
+            <h3>@house.for_ai</h3>
+            <p class="instagram-bio">Premium AI prompts, automation & creative tools for modern creators</p>
+          </div>
+        </div>
+        <a href="https://www.instagram.com/house.for_ai?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="btn gold instagram-follow">Follow Now</a>
+      </div>
+      
+      <div class="instagram-stats">
+        <div class="stat-item">
+          <div class="stat-number">5K+</div>
+          <div class="stat-label">Followers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">200+</div>
+          <div class="stat-label">Posts</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">15K+</div>
+          <div class="stat-label">Engagements</div>
+        </div>
+      </div>
+      
+      <div class="instagram-grid">
+        <div class="instagram-post">
+          <div class="post-icon">💡</div>
+          <div class="post-title">AI Prompts</div>
+          <div class="post-desc">Daily creative prompts</div>
+        </div>
+        <div class="instagram-post featured">
+          <div class="post-icon">⚡</div>
+          <div class="post-title">Automation Tips</div>
+          <div class="post-desc">Smart workflow hacks</div>
+        </div>
+        <div class="instagram-post">
+          <div class="post-icon">🎨</div>
+          <div class="post-title">Design Trends</div>
+          <div class="post-desc">Creative inspiration</div>
+        </div>
+        <div class="instagram-post">
+          <div class="post-icon">🚀</div>
+          <div class="post-title">Pro Tips</div>
+          <div class="post-desc">Advanced techniques</div>
+        </div>
+      </div>
+      
+      <div class="instagram-highlights">
+        <div class="highlight-card glass">
+          <span class="highlight-tag">Latest Reel</span>
+          <h4>AI Prompt Mastery</h4>
+          <p>Watch the quick breakdown of a premium AI prompt workflow.</p>
+        </div>
+        <div class="highlight-card glass">
+          <span class="highlight-tag">Story</span>
+          <h4>Daily Inspiration</h4>
+          <p>Creative motion, tools, and prompt trends delivered in a story-style highlight.</p>
+        </div>
+      </div>
+      
+      <div class="instagram-cta">
+        <p>Get exclusive content and real-time updates</p>
+        <div class="cta-icons">
+          <span class="cta-icon">♥️</span>
+          <span class="cta-icon">💬</span>
+          <span class="cta-icon">📸</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="services">
     <div class="section-title">
       <h2>Our Services</h2>
@@ -2334,6 +2957,27 @@
       <div class="service-card glass">
         <h3>AI Tools</h3>
         <p>Tool recommendations, workflow design, and custom dashboards for education, business, and development.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="success-metrics">
+    <div class="section-title">
+      <h2>Success Metrics</h2>
+      <p>Animated performance counters for prompt solves, launches supported, and time saved by premium AI workflows.</p>
+    </div>
+    <div class="metrics-grid">
+      <div class="counter glass">
+        <strong data-target="8100">0</strong>
+        <span>Prompts solved</span>
+      </div>
+      <div class="counter glass">
+        <strong data-target="420">0</strong>
+        <span>Launches supported</span>
+      </div>
+      <div class="counter glass">
+        <strong data-target="98">0</strong>
+        <span>Hours saved per month</span>
       </div>
     </div>
   </section>
@@ -2384,6 +3028,53 @@
           <span class="feature-item">🤖 AI-Powered</span>
           <span class="feature-item">🚀 Instant Deploy</span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="comparison">
+    <div class="section-title">
+      <h2>Feature Comparison</h2>
+      <p>See how House.for_AI stacks up against ordinary solutions with premium automation, design, and ongoing support built in.</p>
+    </div>
+    <div class="comparison-grid">
+      <div class="comparison-card glass">
+        <h3>What You Get</h3>
+        <ul>
+          <li>Custom AI prompts with brand tone</li>
+          <li>Smart automation workflow design</li>
+          <li>Premium motion and interaction polish</li>
+          <li>VIP onboarding support</li>
+          <li>Ongoing optimization and updates</li>
+        </ul>
+      </div>
+      <div class="comparison-card glass competitor-card">
+        <h3>Competitors</h3>
+        <ul>
+          <li>Generic prompt templates</li>
+          <li>Rigid automation setup</li>
+          <li>Static, non-animated interfaces</li>
+          <li>Limited onboarding help</li>
+          <li>Minimal follow-up support</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="personalized">
+    <div class="section-title">
+      <h2>Personalized Onboarding</h2>
+      <p>Choose your use case and receive a custom AI workflow recommendation instantly.</p>
+    </div>
+    <div class="onboarding-panel glass">
+      <div class="onboarding-choice">
+        <button class="onboarding-btn" data-role="Creator">Creator</button>
+        <button class="onboarding-btn" data-role="Founder">Founder</button>
+        <button class="onboarding-btn" data-role="Marketer">Marketer</button>
+      </div>
+      <div class="onboarding-summary" id="onboardingSummary">
+        <h3>Select a role to see your recommended AI workflow.</h3>
+        <p>Each path includes prompt design, automation sequences, and creative tools tailored to your focus.</p>
       </div>
     </div>
   </section>
@@ -2471,19 +3162,54 @@
       <h2>Before & After</h2>
       <p>See how premium AI transformations upgrade your brand, speed, and creative output.</p>
     </div>
-    <div class="transform-grid">
-      <div class="transform-card glass before">
-        <h3>Before</h3>
-        <p>Static prompts, one-size-fits-all content, and slow manual workflows.</p>
+    <div class="before-after-panel glass">
+      <div class="before-after-copy">
+        <div class="before-after-tag">Swipe the slider</div>
+        <h3>See the upgrade</h3>
+        <p>Drag the slider to reveal the difference between traditional content and AI-crafted premium output.</p>
       </div>
-      <div class="transform-card glass after">
-        <h3>After</h3>
-        <p>Dynamic AI prompts, smart automations, and premium motion-driven experiences.</p>
+      <div class="before-after-frame">
+        <div class="before-after-image before-panel">
+          <span>Before</span>
+          <img loading="lazy" src="https://images.unsplash.com/photo-1531497865141-0f0a5932a8ff?auto=format&fit=crop&w=900&q=80" alt="Before AI workflow">
+        </div>
+        <div class="before-after-image after-panel" id="afterPanel">
+          <span>After</span>
+          <img loading="lazy" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="After AI workflow">
+        </div>
+        <input type="range" min="0" max="100" value="50" class="after-slider" id="afterSlider" aria-label="Before and after reveal slider">
       </div>
     </div>
   </section>
 
-  <section id="skills">
+  <section id="faq-trust">
+    <div class="section-title">
+      <h2>FAQ & Trust</h2>
+      <p>Answers, credentials, and partner trust signals for a premium AI experience you can rely on.</p>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-card glass">
+        <button class="faq-question">How quickly can I launch an AI workflow?</button>
+        <div class="faq-answer">Most custom workflows can be designed and prototyped in 2–4 days, with launch-ready prompts delivered within the first week.</div>
+      </div>
+      <div class="faq-card glass">
+        <button class="faq-question">Can I get help with prompt strategy?</button>
+        <div class="faq-answer">Yes. House.for_AI includes curated prompt strategies for marketing, content creation, and technical automation.</div>
+      </div>
+      <div class="faq-card glass">
+        <button class="faq-question">What does the VIP waitlist include?</button>
+        <div class="faq-answer">VIP waitlist members receive early access to new templates, priority onboarding, and exclusive optimization sessions.</div>
+      </div>
+    </div>
+    <div class="trust-badges glass">
+      <span>Trusted by AI Studio</span>
+      <span>Featured in Motion Lab</span>
+      <span>ISO-inspired workflow standards</span>
+      <span>Expert-reviewed prompts</span>
+    </div>
+  </section>
+
+  <section id="about">
     <div class="section-title">
       <h2>AI Skills</h2>
       <p>Track progress with animated skill bars that highlight capabilities across prompt design, automation, and product thinking.</p>
@@ -2620,7 +3346,8 @@
     <div class="newsletter glass">
       <input id="newsletterEmail" type="email" placeholder="Enter your email" aria-label="Email address">
       <input id="newsletterPhone" type="tel" placeholder="Phone number (SMS)" aria-label="Phone number">
-      <button id="newsletterSubmit">Subscribe</button>
+      <button id="newsletterSubmit">Join VIP Waitlist</button>
+      <div class="newsletter-feedback" id="newsletterFeedback" aria-live="polite"></div>
     </div>
   </section>
 
@@ -2716,10 +3443,15 @@
     const chatbotInput = document.getElementById('chatbotInput');
     const chatbotMessages = document.getElementById('chatbotMessages');
     const typewriter = document.getElementById('typewriter');
+    const welcomeTypewriter = document.getElementById('welcomeTypewriter');
     const skillBars = document.querySelectorAll('.skill-progress');
     const contactForm = document.getElementById('contactForm');
     const newsletterSubmit = document.getElementById('newsletterSubmit');
     const newsletterEmail = document.getElementById('newsletterEmail');
+    const newsletterFeedback = document.getElementById('newsletterFeedback');
+    const onboardingSummary = document.getElementById('onboardingSummary');
+    const afterSlider = document.getElementById('afterSlider');
+    const afterPanel = document.getElementById('afterPanel');
     const testimonials = [
       { text: '“House.for_AI transformed our workflow with AI prompts and automation. The experience feels luxurious and intuitive.”', author: 'Maya, Product Designer' },
       { text: '“A polished AI companion for creators. The interface is stunning and the automation suggestions are on point.”', author: 'Leo, Startup Founder' },
@@ -2731,13 +3463,17 @@
       setTimeout(() => { loader.style.opacity = '0'; loader.style.transform = 'scale(1.02)'; }, 800);
       setTimeout(() => { loader.remove(); }, 1400);
       animateTypewriter();
+      animateWelcomeTypewriter();
       animateSkillBars();
       initCursor();
       initParticles();
       initScrollAnimations();
       initPromptGenerator();
       initCountdown();
+      initMetricCounters();
+      initWelcome();
       initTheme();
+      initInteractiveFeatures();
       updateTestimonials();
     };
 
@@ -2767,6 +3503,23 @@
         }
       };
       loop();
+    };
+
+    const animateWelcomeTypewriter = () => {
+      const phrase = 'Tap anywhere to enter the site.';
+      let char = 0;
+      if (!welcomeTypewriter) return;
+      welcomeTypewriter.textContent = '';
+      gsap.set(welcomeTypewriter, { opacity: 1 });
+
+      const reveal = () => {
+        welcomeTypewriter.textContent = phrase.slice(0, char);
+        char++;
+        if (char <= phrase.length) {
+          setTimeout(reveal, 70);
+        }
+      };
+      reveal();
     };
 
     const initTheme = () => {
@@ -2864,6 +3617,88 @@
       };
       update();
       setInterval(update, 1000);
+    };
+
+    const initMetricCounters = () => {
+      const metricSection = document.getElementById('success-metrics');
+      const counters = document.querySelectorAll('#success-metrics .counter strong');
+      if (!metricSection || counters.length === 0) return;
+
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          counters.forEach(el => {
+            const target = Number(el.dataset.target) || 0;
+            const count = { value: 0 };
+            gsap.to(count, {
+              value: target,
+              duration: 2,
+              ease: 'power2.out',
+              onUpdate: () => { el.textContent = Math.floor(count.value); }
+            });
+          });
+          obs.disconnect();
+        });
+      }, { threshold: 0.4 });
+      observer.observe(metricSection);
+    };
+
+    const initInteractiveFeatures = () => {
+      document.querySelectorAll('.onboarding-btn').forEach(button => {
+        button.addEventListener('click', () => {
+          document.querySelectorAll('.onboarding-btn').forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+          const role = button.dataset.role;
+          const copy = {
+            Creator: 'A creative toolkit with prompt artistry, content sequencing, and brand storytelling for social, writing, and multimedia workflows.',
+            Founder: 'A launch-ready automation stack for product planning, team briefs, and rapid AI-powered growth experiments.',
+            Marketer: 'A campaign-first system with conversion prompts, audience targeting flows, and performance-driven messaging tools.'
+          };
+          onboardingSummary.innerHTML = `
+            <h3>${role} Workflow</h3>
+            <p>${copy[role] || copy.Creator}</p>
+          `;
+        });
+      });
+
+      if (afterSlider && afterPanel) {
+        afterSlider.addEventListener('input', (event) => {
+          const value = event.target.value;
+          afterPanel.style.width = `${value}%`;
+        });
+      }
+
+      document.querySelectorAll('.faq-card').forEach(card => {
+        const question = card.querySelector('.faq-question');
+        const answer = card.querySelector('.faq-answer');
+        question.addEventListener('click', () => {
+          card.classList.toggle('open');
+          if (card.classList.contains('open')) {
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+          } else {
+            answer.style.maxHeight = '0';
+          }
+        });
+      });
+    };
+
+    const initWelcome = () => {
+      const overlay = document.getElementById('welcomeOverlay');
+      const autoShow = () => {
+        overlay.classList.remove('hide');
+        overlay.classList.add('glow');
+      };
+
+      if (!overlay) return;
+      overlay.classList.remove('hide');
+      setTimeout(autoShow, 200);
+
+      const closeOverlay = () => {
+        overlay.classList.add('hide');
+        setTimeout(() => overlay.remove(), 700);
+      };
+
+      overlay.addEventListener('click', closeOverlay);
     };
 
     const initCursor = () => {
